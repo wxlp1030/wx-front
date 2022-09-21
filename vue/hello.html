@@ -8,12 +8,17 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="view">{{message}}</div>
+    <div id="view">
+        <input type="radio" name="arr" v-for="a in arr" :value="a">
+
+    </div>
+    
     <script>
         const app = Vue.createApp({
             data() {
                 return {
                     message : "hello world",
+                    arr: ["124", "gggg", "jhhh"]
                 }
             },
             methods : {}

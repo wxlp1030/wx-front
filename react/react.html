@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +10,39 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
 </head>
+
 <body>
     <div id="root"></div>
     <script type="text/babel">
-        const element = <h1>hello world</h1>
-        const root = ReactDOM.createRoot(document.getElementById("root"))
-        root.render(element)
+
+        // function Demo() {
+        //     return <span>hello world</span>
+        // }
+        // const hello = <h1>你好<Demo /></h1>
+        // const root = ReactDOM.createRoot(document.getElementById("root"))
+        // root.render(hello)
+
+        class Weather extends React.Component {
+            render() {
+                return <h1 onClick={this.demo}>{this.state.flag ? '你好' : 'hello'}</h1>
+            }
+            constructor(props) {
+                super(props);
+                this.state = {flag : true}
+                this.demo = this.demo.bind(this)
+            }
+
+            demo() {
+                const flag = this.state.flag;
+                this.setState({flag: !flag})
+            }
+        }
+        ReactDOM.render(<Weather />, document.getElementById("root"))
+        
+
+
+
     </script>
 </body>
+
 </html>
