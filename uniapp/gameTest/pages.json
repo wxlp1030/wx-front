@@ -1,0 +1,227 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"bounce": "none" // 将回弹属性关掉
+				},
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"bounce": "none" // 将回弹属性关掉
+				},
+				"navigationBarTextStyle": "black"
+			}
+
+		}, {
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"bounce": "none" // 将回弹属性关掉
+				},
+				"navigationBarTextStyle": "black"
+			}
+
+		}, 
+		{
+			"path": "pages/renwu/renwu",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"bounce": "none" // 将回弹属性关掉
+				},
+				"navigationBarTextStyle": "black"
+			}
+		}, 
+		{
+			"path": "pages/set/set",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"bounce": "none" // 将回弹属性关掉
+				},
+				"navigationBarTextStyle": "black"
+			}
+
+		}, {
+			"path": "pages/about/about",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"bounce": "none" // 将回弹属性关掉
+				},
+				"navigationBarTextStyle": "black"
+			}
+		}, {
+			"path": "pages/xieyi/xieyi",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"bounce": "none" // 将回弹属性关掉
+				},
+				"navigationBarTextStyle": "black"
+			}
+
+		}, {
+			"path": "pages/tixian/tixian",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"bounce": "none" // 将回弹属性关掉
+				}
+			}
+
+		}, {
+			"path": "pages/shiming/shiming",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"bounce": "none" // 将回弹属性关掉
+				}
+			}
+
+		}, {
+			"path": "pages/nickname/nickname",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/alipay/alipay",
+			"style": {
+				"navigationBarTitleText": "我的支付宝",
+				"app-plus": {
+					"bounce": "none" // 将回弹属性关掉
+				},
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"backgroundColor": "#F5F5F5"
+			}
+
+		},
+		{
+			"path": "uni_modules/uni-upgrade-center-app/pages/upgrade-popup",
+			"style": {
+				"disableScroll": true,
+				"app-plus": {
+					"backgroundColorTop": "transparent",
+					"background": "transparent",
+					"titleNView": false,
+					"scrollIndicator": false,
+					"popGesture": "none",
+					"animationType": "fade-in",
+					"animationDuration": 200
+
+				}
+			}
+		},
+		{
+			"path": "pages/common/webview/webview",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "uni_modules/uni-feedback/pages/opendb-feedback/opendb-feedback",
+			"style": {
+				"navigationStyle":"default",
+				"navigationBarTitleText": "意见反馈",
+				"navigationBarBackgroundColor":"#668cff",
+				"navigationBarTextStyle":"white"
+			}
+		},
+		{
+			"path": "uni_modules/uni-feedback/pages/opendb-feedback/list",
+			"style": {
+				"navigationStyle":"default",
+				"navigationBarTitleText": "我的消息",
+				"navigationBarBackgroundColor":"#668cff",
+				"navigationBarTextStyle":"white"
+			}
+		},
+		// #ifdef APP-PLUS 
+		{
+			"path": "pages/play/play",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"bounce": "none" // 将回弹属性关掉
+				}
+			}
+		},
+		{
+			"path": "pages/invite/invite",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		
+		}, 
+		{
+			"path": "pages/inviteFriends/inviteFriends",
+			"style": {
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 30
+			}
+		},
+		{
+			"path": "pages/inviteReward/inviteReward",
+			"style": {
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 30
+			}
+		},
+		// #endif
+		{
+			"path": "pages/download-app/download-app",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationStyle": "custom",
+		"navigationBarTitleText": "猜歌游戏",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#3367F9",
+		"selectedColor": "#3367F9",
+		// #ifdef APP-PLUS
+		"borderStyle": "#3367F9",
+		"iconWidth": "40px",
+		// #endif
+		// #ifdef MP-WEIXIN
+		"borderStyle": "black",
+		// #endif
+		"backgroundColor": "#3367F9",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/imags/tabbar/cg.png",
+			"selectedIconPath": "static/imags/tabbar/cgxz.png"
+		}, 
+		{
+			"pagePath": "pages/renwu/renwu",
+			"iconPath": "static/imags/tabbar/rw.png",
+			"selectedIconPath": "static/imags/tabbar/rwxz.png"
+		}, 
+		{
+			"pagePath": "pages/mine/mine",
+			"iconPath": "static/imags/tabbar/wd.png",
+			"selectedIconPath": "static/imags/tabbar/wdxz.png"
+		}]
+	}
+}

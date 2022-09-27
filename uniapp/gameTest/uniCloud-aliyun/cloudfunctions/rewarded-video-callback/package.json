@@ -1,0 +1,10 @@
+{
+	"name": "rewarded-video-callback",
+	"dependencies": {
+		"globalunit": "file:../common/globalunit",
+		"uni-config-center": "file:../../../uni_modules/uni-config-center/uniCloud/cloudfunctions/common/uni-config-center"
+	},
+	"extensions": {
+		"uni-cloud-jql": {}
+	}
+}

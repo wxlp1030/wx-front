@@ -10,7 +10,6 @@
 <body>
     <div id="view">
         <input type="radio" name="arr" v-for="a in arr" :value="a">
-
     </div>
     
     <script>
@@ -21,7 +20,16 @@
                     arr: ["124", "gggg", "jhhh"]
                 }
             },
-            methods : {}
+            methods : {
+                test() {
+                    const list = []
+                    list.forEach(e => {
+                        if (e) {
+                            
+                        }
+                    })
+                }
+            }
         })
         app.mount("#view")
     </script>

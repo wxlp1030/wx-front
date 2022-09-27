@@ -1,0 +1,25 @@
+{
+	// 注意：本文档仅支持单行注释，并且'//'前不能有任何非空字符！！！
+
+	"classCom": {
+		"prefix": "clsCom",
+		"body": [
+			"class Hello3 extends React.Component {",
+			"    constructor(props) {",
+			"        super(props)",
+			"        this.state = {text: ''}",
+			"    }",
+			"    render() {",
+			"        return <div>",
+			"                <h1 className=\"cls\"> 第一行</h1>",
+			"                <p >第二行内容</p>",
+			"                <p>第三行{this.state.text}</p>",
+			"                <hr />",
+			"                <input type=\"text\" onChange={this.change.bind(this)}/>",
+			"            </div>",
+			"    }",
+			"}"
+		],
+		"description": "classCom"
+	}
+}

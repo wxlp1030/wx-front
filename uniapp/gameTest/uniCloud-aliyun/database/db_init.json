@@ -1,0 +1,1474 @@
+// 在本文件中可配置云数据库初始化，数据格式见：https://uniapp.dcloud.io/uniCloud/hellodb?id=db-init
+// 编写完毕后对本文件点右键，可按配置规则创建表和添加数据
+{
+	"gameconfig": {
+		"data": [{
+				"_id": "todayqiandao",
+				"sign1": 200,
+				"sign2": 400,
+				"sign3": 600,
+				"sign4": 800,
+				"sign5": 1000
+			}, {
+				"_id": "liandui",
+				"song": 10,
+				"fen": 10
+			}, {
+				"_id": "tixiannum",
+				"liandui": 5
+			}, {
+				"_id": "caigehongbao",
+				"min": 1,
+				"max": 10
+			}, {
+				"_id": "globalinfo",
+				"videocount": 15
+			},
+			{
+				"_id": "duihuan",
+				"coin": 10000
+			},
+			{
+				"_id": "adpid",
+				"fuhuoRewardAdpid": 1507000689,//猜歌复活看激励视频
+				"renwuRewardAdpid": 1507000689, //做任务看激励视频，激励视频测试广告位（adpid）为：1507000689，仅用于HBuilderX标准基座真机运行测试，不会产生真实收益。
+				"hongbaoBannerAdpid": 1111111111, //拆红包下方， 信息流测试广告位（adpid）为：1111111111，仅用于HBuilderX标准基座真机运行测试，不会产生真实收益。
+				"interstitialAdpid":1111111113 ,//首页插屏广告
+				"mpGridAdpid": 1111111111 //微信小程序格子广告位
+			},
+			{
+				"_id": "gotomarket",
+				"iosMarketId": "id1566509933", //appStore下载地址最后id
+				"androidMarketUrl": "http://zhushou.360.cn/detail/index/soft_id/4594699" //Android上架应用市场的下载链接
+			},
+			{
+				"_id": "download",
+				"logo": {
+					"extname": "png",
+					"name": "logo.png",
+					"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/75e55de1-2a69-4722-8deb-30f3390513d0.png"
+				},
+				"appname": "有奖猜歌",
+				"slogan": "歌曲猜不停，与喜欢的音乐不期而遇",
+				"company": "数字天堂（北京）网络技术有限公司",
+				"domainname": "static-c26ec39a-f602-435d-b8bb-0453aa221eb0.bspapp.com/download"
+			},
+			{
+				"_id": "tixiantype", // 提现方式 配置支付类型  zhifubao：支付宝提现方式   weixin：微信提现方式
+				"type": "weixin"
+			},
+			// 邀请好友成功奖励配置
+			{
+				"_id": "rewardFen", 
+				"money": 5000 //注意单位：5000=5元 邀请好友下载app，注册成功，并实名认证后，发放邀请奖励。
+			},
+			{
+				"_id": "withdraw", // 提现手续费比例
+				"commission": 3
+			}, 
+			{
+				"_id": "roles",
+				"role1": 10,
+				"role2": 20,
+				"role3": 30,
+				"role4": 40,
+				"role5": 50,
+				"role6": 60,
+				"role7": 70,
+				"role8": 80,
+				"gailv1": 10, //千分比
+				"gailv2": 10, //千分比
+				"gailv3": 10, //千分比
+				"gailv4": 10, //千分比
+				"gailv5": 10, //千分比
+				"gailv6": 10, //千分比
+				"gailv7": 10, //千分比
+				"gailv8": 10 //千分比
+			}, {
+				"_id": "hongbao",
+				"red1": {
+					"coin": 100,
+					"time": 10
+				},
+				"red2": {
+					"coin": 100,
+					"time": 10
+				},
+				"red3": {
+					"coin": 100,
+					"time": 10
+				},
+				"red4": {
+					"coin": 100,
+					"time": 10
+				},
+				"red5": {
+					"coin": 100,
+					"time": 10
+				},
+				"red6": {
+					"coin": 100,
+					"time": 10
+				},
+				"red7": {
+					"coin": 100,
+					"time": 10
+				},
+				"red8": {
+					"coin": 100,
+					"time": 10
+				},
+				"red9": {
+					"coin": 100,
+					"time": 10
+				},
+				"red10": {
+					"coin": 100,
+					"time": 10
+				}
+			}, {
+				"_id": "videofanbei",
+				"min": 3,
+				"max": 5
+			}, {
+				"_id": "tixian",
+				"index1": {
+					"coin": 0.3,
+					"liandui": 0,
+					"video": 0,
+					"qiandao": 0,
+					"leijicaidui": 0
+				},
+				"index2": {
+					"coin": 0.3,
+					"liandui": 0,
+					"video": 15,
+					"qiandao": 0,
+					"leijicaidui": 0
+				},
+				"index3": {
+					"coin": 0.5,
+					"liandui": 30,
+					"video": 0,
+					"qiandao": 3,
+					"leijicaidui": 0
+				},
+				"index4": {
+					"coin": 1,
+					"liandui": 50,
+					"video": 20,
+					"qiandao": 5,
+					"leijicaidui": 0
+				},
+				"index5": {
+					"coin": 2,
+					"liandui": 80,
+					"video": 30,
+					"qiandao": 10,
+					"leijicaidui": 0
+				},
+				"index6": {
+					"coin": 10,
+					"liandui": 200,
+					"video": 100,
+					"qiandao": 15,
+					"leijicaidui": 0
+				},
+				"index7": {
+					"coin": 50,
+					"liandui": 200,
+					"video": 400,
+					"qiandao": 20,
+					"leijicaidui": 0
+				},
+				"index8": {
+					"coin": 100,
+					"liandui": 800,
+					"video": 600,
+					"qiandao": 50,
+					"leijicaidui": 0
+				},
+				"index9": {
+					"coin": 200,
+					"liandui": 1200,
+					"video": 0,
+					"qiandao": 80,
+					"leijicaidui": 0
+				},
+				"index10": {
+					"coin": 500,
+					"liandui": 0,
+					"video": 0,
+					"qiandao": 100,
+					"leijicaidui": 3000
+				},
+				"index11": {
+					"coin": 1000,
+					"liandui": 0,
+					"video": 0,
+					"qiandao": 150,
+					"leijicaidui": 5000
+				},
+				"index12": {
+					"coin": 2000,
+					"liandui": 0,
+					"video": 0,
+					"qiandao": 200,
+					"leijicaidui": 8000
+				}
+			}
+		]
+	},
+	"videocallback":{},
+	"opendb-app-list": {
+		"data": [],
+		"index": [{
+			"IndexName": "appid",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "appid",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": true
+			}
+		}, {
+			"IndexName": "name",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "name",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}]
+	},
+	"opendb-app-versions": {
+		"data": [],
+		"index": [{
+			"IndexName": "appid",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "appid",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "查找上线发行应用",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "appid",
+					"Direction": "1"
+				}, {
+					"Name": "platform",
+					"Direction": "1"
+				}, {
+					"Name": "stable_publish",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}]
+	},
+	"uni-id-users": {
+		"data": [],
+		"index": [{
+			"IndexName": "username",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "username",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "mobile",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "mobile",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "email",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "email",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "wx_openid.app-plus",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "wx_openid.app-plus",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "wx_openid.mp-weixin",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "wx_openid.mp-weixin",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "wx_unionid",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "wx_unionid",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "ali_openid",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "ali_openid",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "my_invite_code",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "my_invite_code",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "inviter_uid",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "inviter_uid",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "invite_time",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "invite_time",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "role",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "role",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}]
+	},
+	"opendb-verify-codes": {
+		"data": []
+	},
+	"uni-id-roles": {
+		"data": [],
+		"index": [{
+				"IndexName": "role_id",
+				"MgoKeySchema": {
+					"MgoIndexKeys": [{
+						"Name": "role_id",
+						"Direction": "1"
+					}],
+					"MgoIsUnique": true
+				}
+			},
+			{
+				"IndexName": "permission",
+				"MgoKeySchema": {
+					"MgoIndexKeys": [{
+						"Name": "permission",
+						"Direction": "1"
+					}],
+					"MgoIsUnique": false
+				}
+			}
+		]
+	},
+	"uni-id-permissions": {
+		"data": [],
+		"index": [{
+			"IndexName": "permission_id",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "permission_id",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": true
+			}
+		}]
+	},
+	"userinfo": {},
+	"taskinfo": {},
+	"rewardinfo": {},
+	"songlist": {
+		"data": [{
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/9723430b-b15b-4b8d-bcd7-02a3d72e6a9e.mp3",
+			"daan1": "隔壁泰山",
+			"daan2": "暗里着迷",
+			"daan3": "潮汐",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/e2ba5c61-3039-4699-a1d3-d00d82561076.mp3",
+			"daan1": "夜空中最亮的星",
+			"daan2": "牧马城市",
+			"daan3": "一吻天荒",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/c655ab2e-cc74-497f-9ed2-0c55dfd48906.mp3",
+			"daan1": "宁采臣",
+			"daan2": "倩女幽魂",
+			"daan3": "聂小倩",
+			"correct": 2,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/4629c698-34db-4393-a6a9-2dcfd1cfe5b8.mp3",
+			"daan1": "感谢你曾来过",
+			"daan2": "单车",
+			"daan3": "你的答案",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/4629c698-34db-4393-a6a9-2dcfd1cfe5b8.mp3",
+			"daan1": "暗里着迷",
+			"daan2": "情人",
+			"daan3": "新鲜感",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/2a818794-5b16-4e71-8dd3-a7dd46402b31.mp3",
+			"daan1": "感谢你曾来过",
+			"daan2": "单车",
+			"daan3": "新鲜感",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/9723430b-b15b-4b8d-bcd7-02a3d72e6a9e.mp3",
+			"daan1": "泰山",
+			"daan2": "隔壁泰山",
+			"daan3": "人鱼",
+			"correct": 2,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/4629c698-34db-4393-a6a9-2dcfd1cfe5b8.mp3",
+			"daan1": "暗里着迷",
+			"daan2": "你的答案",
+			"daan3": "情人",
+			"correct": 2,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/756bcada-6055-4936-b121-beb1cd81deca.mp3",
+			"daan1": "理想三旬",
+			"daan2": "像鱼",
+			"daan3": "一曲相思",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/47e2a6b0-993b-4b43-af7b-3e59743d670c.mp3",
+			"daan1": "宝贝对不起",
+			"daan2": "裂缝中的阳光",
+			"daan3": "对不起",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/f45a75ef-93f9-4682-9a15-7f535d040eba.mp3",
+			"daan1": "你的答案",
+			"daan2": "不要说话",
+			"daan3": "追光者",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/dc0bdd22-b2d7-40c0-a793-11f815fc6fff.mp3",
+			"daan1": "猪猪侠",
+			"daan2": "白龙马",
+			"daan3": "大鱼",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/5c2004e1-2748-4143-80f0-2b5554aa0125.mp3",
+			"daan1": "谁明浪子心",
+			"daan2": "生僻字",
+			"daan3": "那个女孩",
+			"correct": 2,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/7af873d2-b3d8-433a-935b-eb2d19aebb19.mp3",
+			"daan1": "借口",
+			"daan2": "绿色",
+			"daan3": "画",
+			"correct": 2,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/33f55281-57cd-47c4-b8ba-3ebae42307b8.mp3",
+			"daan1": "千里之外",
+			"daan2": "纪念",
+			"daan3": "你的酒馆对我打了烊",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/a0d983eb-c1ad-4fb4-aaab-c0a4e505b1b4.mp3",
+			"daan1": "寂寞烟火",
+			"daan2": "可不可以",
+			"daan3": "十年",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/95d1712c-e949-4676-9c43-e6f359397f1e.mp3",
+			"daan1": "白龙马",
+			"daan2": "老人与海",
+			"daan3": "重演",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/a9e59c4d-fd19-4a34-ab97-1007e67d8ba7.mp3",
+			"daan1": "即兴",
+			"daan2": "广东爱情故事",
+			"daan3": "可爱女人",
+			"correct": 2,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/2d9ff00f-2289-4a12-a181-476a737b12e9.mp3",
+			"daan1": "你的承诺",
+			"daan2": "黑色沉默",
+			"daan3": "笑纳",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/e10a0090-9598-4422-a913-2ae49fcb5512.mp3",
+			"daan1": "烟火里的尘埃",
+			"daan2": "练习",
+			"daan3": "齐天",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/5b769fbe-ffff-4d28-9e9a-18d3d46baa0e.mp3",
+			"daan1": "不在",
+			"daan2": "那女孩对我说",
+			"daan3": "闹够了没有",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/be40b337-4f97-406a-85cf-787e80adb483.mp3",
+			"daan1": "龙的传人",
+			"daan2": "蛇的传人",
+			"daan3": "虫的传人",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/9dc49b02-978a-41ac-9c10-a031f0d98d98.mp3",
+			"daan1": "月亮",
+			"daan2": "太阳",
+			"daan3": "红日",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/bc32a20c-7cda-47b7-bd6f-2e689ca30e2c.mp3",
+			"daan1": "喝酒",
+			"daan2": "朋友的酒",
+			"daan3": "迷失幻境",
+			"correct": 2,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/1f4cc14f-c6e2-4139-bdf0-3330eaa74414.mp3",
+			"daan1": "忘川彼岸",
+			"daan2": "彼岸花",
+			"daan3": "执迷不悟",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/e2e12785-cf04-4e0f-a0f0-92c19c037844.mp3",
+			"daan1": "云与海",
+			"daan2": "感恩",
+			"daan3": "感恩的心",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/cb5e5bcf-fef8-4094-b30e-3c948153e905.mp3",
+			"daan1": "笑纳",
+			"daan2": "燕无歇",
+			"daan3": "平凡之路",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/5a7a0e35-96cb-4bca-8242-66173c21c008.mp3",
+			"daan1": "小跳蛙",
+			"daan2": "捉鱼摸虾",
+			"daan3": "捉泥鳅",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/ddfae01c-355d-43d4-a86f-17c7d561d42a.mp3",
+			"daan1": "1022-比尔的歌",
+			"daan2": "无人之岛",
+			"daan3": "失控",
+			"correct": 2,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/fb233a59-9596-4842-a672-44b9dffafe83.mp3",
+			"daan1": "游山恋",
+			"daan2": "失控",
+			"daan3": "安和桥",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/59b70a2e-0f6c-4d3e-a986-313272c835a6.mp3",
+			"daan1": "酒干倘卖无",
+			"daan2": "用力活着",
+			"daan3": "如果声音不记得",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/9fa3f020-ed95-4099-8f56-6189a3d5f2c4.mp3",
+			"daan1": "永不失恋的爱",
+			"daan2": "神话情话",
+			"daan3": "间距",
+			"correct": 2,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/8765ca7c-6ed7-425a-b238-64472b3bbda8.mp3",
+			"daan1": "第三个",
+			"daan2": "最后一个",
+			"daan3": "去年夏天",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/a842752e-f797-40ec-acb8-12649bb4524f.mp3",
+			"daan1": "纸短情长",
+			"daan2": "salt",
+			"daan3": "善变",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/5d3b1a3a-328a-490a-a445-df424ef494dd.mp3",
+			"daan1": "星空剪影",
+			"daan2": "烟火人间",
+			"daan3": "你不是真正的快乐",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/caeeee27-c4ad-4609-91cc-5f93c1ea98a1.mp3",
+			"daan1": "我",
+			"daan2": "爱",
+			"daan3": "你",
+			"correct": 2,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/1944493b-d979-42f2-945f-f24daebf55b4.mp3",
+			"daan1": "茫",
+			"daan2": "只要平凡",
+			"daan3": "大天蓬",
+			"correct": 2,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/b9039d88-0b46-4d7e-87c9-882bea21844a.mp3",
+			"daan1": "不知所措",
+			"daan2": "破茧",
+			"daan3": "带你去旅行",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/5c1756de-88ce-42dd-9ecf-83ef1445bc5c.mp3",
+			"daan1": "白羊",
+			"daan2": "慢慢",
+			"daan3": "不过人人间",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/c02581aa-0596-4278-a3cc-d4b184ec0c4b.mp3",
+			"daan1": "骗",
+			"daan2": "厚颜无耻",
+			"daan3": "等一分钟",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/4a7c769c-ab32-4e30-95e0-fb20914197e9.mp3",
+			"daan1": "下面",
+			"daan2": "沧海一声笑",
+			"daan3": "上面",
+			"correct": 2,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/0ed348c5-142a-4273-a378-149342a45b36.mp3",
+			"daan1": "三号线",
+			"daan2": "我爱你不问归期",
+			"daan3": "阳光总在风雨后",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/65915f01-a8d4-49b1-b542-f82f32166809.mp3",
+			"daan1": "广寒谣",
+			"daan2": "花海",
+			"daan3": "玫瑰花的葬礼",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/876a3574-4b12-4c0f-9d05-76448720f3ac.mp3",
+			"daan1": "我还是",
+			"daan2": "旧梦一场",
+			"daan3": "情深深雨濛濛",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/e9b8282b-4d7d-483a-ac41-6d0491573606.mp3",
+			"daan1": "沙漠骆驼",
+			"daan2": "游京",
+			"daan3": "骆驼",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/c655ab2e-cc74-497f-9ed2-0c55dfd48906.mp3",
+			"daan1": "宁采臣",
+			"daan2": "倩女幽魂",
+			"daan3": "聂小倩",
+			"correct": 2,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/513f0fb7-3b7c-4d8c-beea-5ea43fe1ec5c.mp3",
+			"daan1": "给我一首歌的时间",
+			"daan2": "暗里着迷",
+			"daan3": "女儿国",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/2e17432d-b421-4197-a476-72fc6ff5cd6a.mp3",
+			"daan1": "一剪梅",
+			"daan2": "稻香",
+			"daan3": "潮汐",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/54bd9425-0526-4d38-b8ce-920b16a449d6.mp3",
+			"daan1": "你的万水青山",
+			"daan2": "别知己",
+			"daan3": "如果这都不算爱",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/6a235f9a-731a-40b7-9ca5-0e227e362b5c.mp3",
+			"daan1": "吻别",
+			"daan2": "偏爱",
+			"daan3": "不及",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/e2ba5c61-3039-4699-a1d3-d00d82561076.mp3",
+			"daan1": "夜空中最亮的星",
+			"daan2": "牧马城市",
+			"daan3": "一吻天荒",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/ec8ff558-98b1-4b48-8099-f942926113da.mp3",
+			"daan1": "冬眠",
+			"daan2": "小鸟",
+			"daan3": "我是一只小小鸟",
+			"correct": 3,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/786cffed-4f83-4d9f-bc38-742ac8708d06.mp3",
+			"daan1": "夜上海",
+			"daan2": "尘埃",
+			"daan3": "上海滩",
+			"correct": 1,
+			"createtime": 1617851118
+		}, {
+			"url": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-c26ec39a-f602-435d-b8bb-0453aa221eb0/caa83274-017a-469b-9e99-28e6f2fde8d1.mp3",
+			"daan1": "错过",
+			"daan2": "以后的以后",
+			"daan3": "我走后",
+			"correct": 2,
+			"createtime": 1617851118
+		}]
+	},
+	"withdrawrecord_log": {},
+	"opendb-feedback": {},
+	"opendb-admin-menus": {
+		"data": [{
+			"menu_id": "index",
+			"name": "首页",
+			"icon": "uni-icons-home",
+			"url": "/",
+			"sort": 100,
+			"parent_id": "",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "user",
+			"name": "用户管理",
+			"icon": "uni-icons-person",
+			"url": "/pages/userlist/userlist",
+			"sort": 101,
+			"parent_id": "",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "song",
+			"name": "歌曲管理",
+			"icon": "uni-icons-gear",
+			"url": "/pages/audio/audio",
+			"sort": 102,
+			"parent_id": "",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "uni-feedback",
+			"name": "意见反馈",
+			"icon": "uni-icons-gear",
+			"url": "/uni_modules/uni-feedback-admin/pages/uni-feedback-admin/list",
+			"sort": 103,
+			"parent_id": "",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		}, 
+		{
+			"menu_id": "task",
+			"name": "任务列表",
+			"icon": "uni-icons-gear",
+			"url": "",
+			"sort": 104,
+			"parent_id": "",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "taskcaige",
+			"name": "猜歌任务列表",
+			"icon": "uni-icons-gear",
+			"url": "/pages/task/task",
+			"sort": 105,
+			"parent_id": "task",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "tasktoday",
+			"name": "每日任务列表",
+			"icon": "uni-icons-gear",
+			"url": "/pages/task/tasktoday",
+			"sort": 106,
+			"parent_id": "task",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "adset",
+			"name": "广告设置",
+			"icon": "uni-icons-gear",
+			"url": "",
+			"sort": 107,
+			"parent_id": "",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "setadpid",
+			"name": "广告位设置",
+			"icon": "uni-icons-gear",
+			"url": "/pages/setadpid/setadpid",
+			"sort": 108,
+			"parent_id": "adset",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		}, 
+		{
+			"menu_id": "video",
+			"name": "看视频次数",
+			"icon": "uni-icons-gear",
+			"url": "/pages/video/video",
+			"sort": 109,
+			"parent_id": "adset",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "tixian",
+			"name": "提现管理",
+			"icon": "uni-icons-gear",
+			"url": "/pages/tixian/tixian",
+			"sort": 110,
+			"parent_id": "",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "tixianset",
+			"name": "提现设置",
+			"icon": "uni-icons-gear",
+			"url": "",
+			"sort": 111,
+			"parent_id": "",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "tixiannum",
+			"name": "提现次数",
+			"icon": "uni-icons-gear",
+			"url": "/pages/tixiannum/tixiannum",
+			"sort": 112,
+			"parent_id": "tixianset",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "txscf",
+			"name": "提现手续费",
+			"icon": "uni-icons-gear",
+			"url": "/pages/txscf/txscf",
+			"sort": 113,
+			"parent_id": "tixianset",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "settixiantype",
+			"name": "提现方式",
+			"icon": "uni-icons-gear",
+			"url": "/pages/settixiantype/settixiantype",
+			"sort": 114,
+			"parent_id": "tixianset",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "txgz",
+			"name": "提现规则设置",
+			"icon": "uni-icons-gear",
+			"url": "/pages/tixianguize/tixianguize",
+			"sort": 115,
+			"parent_id": "tixianset",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "cangshu",
+			"name": "参数管理",
+			"icon": "uni-icons-gear",
+			"url": "",
+			"sort": 116,
+			"parent_id": "",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "caigejiangli",
+			"name": "猜歌奖励",
+			"icon": "uni-icons-gear",
+			"url": "/pages/caigejiangli/caigejiangli",
+			"sort": 117,
+			"parent_id": "cangshu",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "lianduijiang",
+			"name": "连对奖励",
+			"icon": "uni-icons-gear",
+			"url": "/pages/lianduijiang/lianduijiang",
+			"sort": 118,
+			"parent_id": "cangshu",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "videofanbei",
+			"name": "看视频奖励倍数设置",
+			"icon": "uni-icons-gear",
+			"url": "/pages/videofanbei/videofanbei",
+			"sort": 119,
+			"parent_id": "cangshu",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "setrewardFen",
+			"name": "邀请好友奖励",
+			"icon": "uni-icons-gear",
+			"url": "/pages/setrewardFen/setrewardFen",
+			"sort": 120,
+			"parent_id": "cangshu",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "hongbao",
+			"name": "红包设置",
+			"icon": "uni-icons-gear",
+			"url": "/pages/hongbao/hongbao",
+			"sort": 121,
+			"parent_id": "cangshu",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "qiandao",
+			"name": "签到管理",
+			"icon": "uni-icons-gear",
+			"url": "/pages/qiandao/qiandao",
+			"sort": 122,
+			"parent_id": "cangshu",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "duihuan",
+			"name": "兑换设置",
+			"icon": "uni-icons-gear",
+			"url": "/pages/duihuan/duihuan",
+			"sort": 123,
+			"parent_id": "cangshu",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "role",
+			"name": "大转盘设置",
+			"icon": "uni-icons-gear",
+			"url": "/pages/role/role",
+			"sort": 124,
+			"parent_id": "cangshu",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "setgotomarket",
+			"name": "去评价设置",
+			"icon": "uni-icons-gear",
+			"url": "/pages/setgotomarket/setgotomarket",
+			"sort": 125,
+			"parent_id": "cangshu",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "setdownload",
+			"name": "下载页设置",
+			"icon": "uni-icons-gear",
+			"url": "/pages/setdownload/setdownload",
+			"sort": 126,
+			"parent_id": "cangshu",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		},
+		{
+			"menu_id": "system_management",
+			"name": "系统管理",
+			"icon": "admin-icons-fl-xitong",
+			"url": "",
+			"sort": 1000,
+			"parent_id": "",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		}, 
+		{
+			"menu_id": "system_user",
+			"name": "用户管理",
+			"icon": "admin-icons-manager-user",
+			"url": "/pages/system/user/list",
+			"sort": 1010,
+			"parent_id": "system_management",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469398
+		}, {
+			"menu_id": "system_role",
+			"name": "角色管理",
+			"icon": "admin-icons-manager-role",
+			"url": "/pages/system/role/list",
+			"sort": 1020,
+			"parent_id": "system_management",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469397
+		}, {
+			"menu_id": "system_permission",
+			"name": "权限管理",
+			"icon": "admin-icons-manager-permission",
+			"url": "/pages/system/permission/list",
+			"sort": 1030,
+			"parent_id": "system_management",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		}, {
+			"menu_id": "system_menu",
+			"name": "菜单管理",
+			"icon": "admin-icons-manager-menu",
+			"url": "/pages/system/menu/list",
+			"sort": 1040,
+			"parent_id": "system_management",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469396
+		}, {
+			"menu_id": "system_app",
+			"name": "应用管理",
+			"icon": "admin-icons-manager-app",
+			"url": "/pages/system/app/list",
+			"sort": 1035,
+			"parent_id": "system_management",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662469399
+		}, {
+			"menu_id": "system_update",
+			"name": "App升级中心",
+			"icon": "uni-icons-cloud-upload",
+			"url": "/uni_modules/uni-upgrade-center/pages/version/list",
+			"sort": 1036,
+			"parent_id": "system_management",
+			"permission": [],
+			"enable": true,
+			"create_date": 1656491532434
+		}, {
+			"menu_id": "system_tag",
+			"name": "标签管理",
+			"icon": "admin-icons-manager-tag",
+			"url": "/pages/system/tag/list",
+			"sort": 1037,
+			"parent_id": "system_management",
+			"permission": [],
+			"enable": true,
+			"create_date": 1602662479389
+		}, {
+			"permission": [],
+			"enable": true,
+			"menu_id": "safety_statistics",
+			"name": "安全审计",
+			"icon": "admin-icons-safety",
+			"url": "",
+			"sort": 3100,
+			"parent_id": "",
+			"create_date": 1638356430871
+		}, {
+			"permission": [],
+			"enable": true,
+			"menu_id": "safety_statistics_user_log",
+			"name": "用户日志",
+			"icon": "",
+			"url": "/pages/system/safety/list",
+			"sort": 3101,
+			"parent_id": "safety_statistics",
+			"create_date": 1638356430871
+		}, {
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat",
+			"name": "uni 统计",
+			"icon": "admin-icons-tongji",
+			"url": "",
+			"sort": 2100,
+			"parent_id": "",
+			"create_date": 1638356430871
+		}, {
+			"parent_id": "uni-stat",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-device",
+			"name": "设备统计",
+			"icon": "admin-icons-shebeitongji",
+			"url": "",
+			"sort": 2120,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-device",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-device-overview",
+			"name": "概况",
+			"icon": "",
+			"url": "/pages/uni-stat/device/overview/overview",
+			"sort": 2121,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-device",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-device-activity",
+			"name": "活跃度",
+			"icon": "",
+			"url": "/pages/uni-stat/device/activity/activity",
+			"sort": 2122,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-device",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-device-trend",
+			"name": "趋势分析",
+			"icon": "",
+			"url": "/pages/uni-stat/device/trend/trend",
+			"sort": 2123,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-device",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-device-retention",
+			"name": "留存",
+			"icon": "",
+			"url": "/pages/uni-stat/device/retention/retention",
+			"sort": 2124,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-device",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-device-comparison",
+			"name": "平台对比",
+			"icon": "",
+			"url": "/pages/uni-stat/device/comparison/comparison",
+			"sort": 2125,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-device",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-device-stickiness",
+			"name": "粘性",
+			"icon": "",
+			"url": "/pages/uni-stat/device/stickiness/stickiness",
+			"sort": 2126,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-user",
+			"name": "注册用户统计",
+			"icon": "admin-icons-yonghutongji",
+			"url": "",
+			"sort": 2122,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-user",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-user-overview",
+			"name": "概况",
+			"icon": "",
+			"url": "/pages/uni-stat/user/overview/overview",
+			"sort": 2121,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-user",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-user-activity",
+			"name": "活跃度",
+			"icon": "",
+			"url": "/pages/uni-stat/user/activity/activity",
+			"sort": 2122,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-user",
+			"permission": [],
+			"enable": true,
+			"icon": "",
+			"menu_id": "uni-stat-user-trend",
+			"name": "趋势分析",
+			"url": "/pages/uni-stat/user/trend/trend",
+			"sort": 2123,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-user",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-user-retention",
+			"name": "留存",
+			"icon": "",
+			"url": "/pages/uni-stat/user/retention/retention",
+			"sort": 2124,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-user",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-user-comparison",
+			"name": "平台对比",
+			"icon": "",
+			"url": "/pages/uni-stat/user/comparison/comparison",
+			"sort": 2125,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-user",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-user-stickiness",
+			"name": "粘性",
+			"icon": "",
+			"url": "/pages/uni-stat/user/stickiness/stickiness",
+			"sort": 2126,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-page-analysis",
+			"name": "页面统计",
+			"icon": "admin-icons-page-ent",
+			"url": "",
+			"sort": 2123,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-page-analysis",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-page-res",
+			"name": "受访页",
+			"icon": "",
+			"url": "/pages/uni-stat/page-res/page-res",
+			"sort": 2131,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-page-analysis",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-page-ent",
+			"name": "入口页",
+			"icon": "",
+			"url": "/pages/uni-stat/page-ent/page-ent",
+			"sort": 2132,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-senceChannel",
+			"name": "渠道/场景值分析",
+			"icon": "admin-icons-qudaofenxi",
+			"url": "",
+			"sort": 2150,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-senceChannel",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-senceChannel-scene",
+			"name": "场景值（小程序）",
+			"icon": "",
+			"url": "/pages/uni-stat/scene/scene",
+			"sort": 2151,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-senceChannel",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-senceChannel-channel",
+			"name": "渠道（app）",
+			"icon": "",
+			"url": "/pages/uni-stat/channel/channel",
+			"sort": 2152,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-event-event",
+			"name": "自定义事件",
+			"icon": "admin-icons-shijianfenxi",
+			"url": "/pages/uni-stat/event/event",
+			"sort": 2160,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-error",
+			"name": "错误统计",
+			"icon": "admin-icons-cuowutongji",
+			"url": "",
+			"sort": 2170,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-error",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-error-js",
+			"name": "js报错",
+			"icon": "",
+			"url": "/pages/uni-stat/error/js/js",
+			"sort": 2171,
+			"create_date": 1638356902516
+		}, {
+			"parent_id": "uni-stat-error",
+			"permission": [],
+			"enable": true,
+			"menu_id": "uni-stat-error-app",
+			"name": "app崩溃",
+			"icon": "",
+			"url": "/pages/uni-stat/error/app/app",
+			"sort": 2172,
+			"create_date": 1638356902516
+		}]
+	},
+	"uni-stat-active-devices": {},
+	"uni-stat-active-users": {},
+	"uni-stat-app-channels": {},
+	"uni-stat-app-crash-logs": {},
+	"uni-stat-app-platforms": {},
+	"uni-stat-error-logs": {},
+	"uni-stat-error-result": {},
+	"uni-stat-event-logs": {},
+	"uni-stat-event-result": {},
+	"uni-stat-events": {},
+	"uni-stat-loyalty-result": {},
+	"uni-stat-mp-scenes": {},
+	"uni-stat-page-logs": {},
+	"uni-stat-page-result": {},
+	"uni-stat-pages": {},
+	"uni-stat-result": {},
+	"uni-stat-run-errors": {},
+	"uni-stat-session-logs": {},
+	"uni-stat-share-logs": {},
+	"uni-stat-user-session-logs": {},
+	"opendb-device": {}
+}

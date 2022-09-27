@@ -1,0 +1,96 @@
+.phone{
+	width: 100%;
+	height: 115rpx;
+	padding: 0 30rpx 0 25rpx;
+	box-sizing: border-box;
+}
+.phone .titile{
+	width: 150rpx;
+	height: 115rpx;
+	line-height: 115rpx;
+	color: #333333;
+	float: left;
+}
+.phone .inputbox{
+	width: 300rpx;
+	height: 100%;
+	float: left;
+	line-height: 115rpx;
+}
+.phone .inputbox .input{
+	height: 100%;
+	line-height: 115rpx;
+	color: #333333;
+}
+.phone .code{
+	width: 150rpx;
+	height: 54rpx;
+	float: right;
+	background-color: #EEEEEE;
+	border-radius: 54rpx;
+	margin-top: 30rpx;
+	color: #999999;
+	font-size: 25rpx;
+	text-align: center;
+	line-height: 54rpx;
+}
+
+.tijiao{
+	background-image: linear-gradient(to bottom, #be98e6 , #af81e6);
+	width: 626rpx;
+	height: 88rpx;
+	border-radius: 88rpx;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 100rpx;
+	margin: auto;
+	color: #FFFFFF;
+	font-size: 30rpx;
+	font-weight: bold;
+	line-height: 88rpx;
+	text-align: center;
+}
+
+
+
+.bgimg{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -3;
+}
+.liuhai{
+	/* background-image: url(../../static/imags/set/title.png); */
+    background-color: rgb(102,140,255);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+}
+.appbar{
+	width: 100%;
+	height: 90rpx;
+	position: fixed;
+	left: 0;
+	background-color: rgb(102,140,255);
+	line-height: 90rpx;
+	text-align: center;
+	font-size: 35rpx;
+	color: #24325A;
+	z-index: 999;
+}
+
+.appbar .lefticon{
+	width: 57rpx;
+	height: 58rpx;
+	background-image: url(../../static/imags/set/fh.png);
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 30rpx;
+	margin: auto;
+}

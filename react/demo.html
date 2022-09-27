@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        function getData() {
+            return [
+                {
+                    name: '神里绫华',
+                    attr: '冰系'
+                },
+                {
+                    name: '神里绫人',
+                    attr: '水系'
+                },
+                {
+                    name: '魈',
+                    attr: '风系'
+                },
+                {
+                    name: '枫原万叶',
+                    attr: '风系'
+                },
+                {
+                    name: '钟离',
+                    attr: '岩系'
+                }
+            ]
+        }  
+
+        // <!--{arr.map(a => <h2>{a.name}是{a.attr}角色</h2>)}-->
+        function Hello() {
+            const arr = getData();
+            arr.map(a => console.log(a))
+            return (<div>
+                    {arr.map(a => <Item name={a.name} attr={a.attr} />)}
+                </div>)
+        }
+
+        class Test extends React.Component {
+
+            constructor(props) {
+                super(props)
+                this.state = {tableData: []}
+            }
+            getData() {
+                return [
+                    {
+                        name: '神里绫华',
+                        attr: '冰系'
+                    },
+                    {
+                        name: '神里绫人',
+                        attr: '水系'
+                    },
+                    {
+                        name: '魈',
+                        attr: '风系'
+                    },
+                    {
+                        name: '枫原万叶',
+                        attr: '风系'
+                    },
+                    {
+                        name: '钟离',
+                        attr: '岩系'
+                    }
+                ]
+            } 
+
+            onclick(e) {
+                console.log(e);
+            }
+            render() {
+                this.setState({tableData: this.getData()})
+                return (<div>
+                    {this.state.tableData.map(a => (
+                            <div><Item name={a.name} attr={a.attr}></Item> 
+                            <button onClick={this.onclick.bind(this)}>删除</button></div>))}
+                    
+                </div>)
+            }
+        }
+
+        function Item(props) {
+            return <h2>{props.name}是{props.attr}角色</h2>
+        }
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(<Test />)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue3</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="view">{{message}}</div>
+    <script>
+		// js jquery VUE react 小程序 
+		// 事件的概念：视图层到逻辑层的通讯方式；将用户行为反馈到逻辑层进行处理；可以携带一些信息（参数）；
+		// 绑定在视图层的元素或组件上，触发指定时间就会执行逻辑层中对应的事件处理函数
+		// js 绑定  在标签中直接绑定（可以传参）、dom.onclick=函数（）、dom.addEventListener(types, 函数)
+		// jquery 绑定：在标签中直接写、dom.bind(types, data, 函数) 、dom.事件名（函数）、dom.on(types、data、函数)
+		// VUE @click \ v-on:click=函数名  当回调不加括号，自动传入一个事件对象、添加括号，需要主动传参
+		// react 绑定事件：驼峰命名  不可添加括号、添加括号会立即执行、会有一个默认的事件对象
+		// 传参  function() {函数（参数列表）}   
+		// 类组件：构造器中 使用 this.函数名 = this.函数名.bind(this, 参数列表)或者直接在绑定处使用 this.函数名.bind（this,参数列表）
+		// e => this.函数名（e） 只能绑定this， 不可传递其他参数
+		// 小程序 bind 关键字 bindtap="函数名" 不可以直接传递参数，也不可以带括号；
+		// 函数在Page 中进行定义、data-属性名 传递参数（currentTarget.dataset），输入框的值可以通过detail.value 获取
+        const app = Vue.createApp({
+            data() {
+                return {
+                    message : "hello world",
+                }
+            },
+            methods : {}
+        })
+        app.mount("#view")
+    </script>
+</body>
+</html>

@@ -11,7 +11,9 @@
     <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
     <style>
         .cls {
-            color: skyblue;
+            color: #002FA7;
+            width: 100%;
+            text-align: center;
         }
     </style>
 </head>
@@ -19,45 +21,50 @@
 <body>
     <div id="root"></div>
     <script type="text/babel">
-        // 函数组件(无参函数、有参函数，多个参数会怎么办)  类组件(状态)
+        // 函数组件  类组件(状态)
         // 因为它本质上就是 JavaScript 函数。 函数组件以及类组件在 React 里是等效的。
 
-
         // 绑定数据
-        function Hello(p, e) {
-            console.log(p);
-            console.log(e);
-            return <h1>{p.text} </h1>
+        function Hello(props) {
+            return <h1 className={props.name}>{props.text} </h1>
         }
 
         // 绑定属性
         function Hello2(p) {
-            console.log();
+            const c = {
+                color : "red",
+                fontSize : "20px"
+            }
+            return <h2 style={c}>{p.text}</h2>
+        }           
+
+        function Hello4(p) {
             // p.text = "修改内容"
-            return <h2 className={p.name}>{p.text}</h2>
+            return <h2>第三行内容：{p.text}</h2>
         }
 
         // 类组件
-        class Hello3 extends React.Component {
-            constructor(props) {
-                super(props)
-                this.state = {text: ''}
-            }
+class Hello3 extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {text: ''}
+    }
 
-            change(e) {
-                this.setState({text: e.target.value})
-            }
+    change(e) {
+        this.setState({text: e.target.value})
+    }
 
-            render() {
-                return <div>
-                    {Hello({text:"测试"}, "第二个参数")}
-                        <Hello text="这是第一行的内容" />
-                        <Hello2 name="cls" text="这是第二行的内容" />
-                        <h3>第三行内容：{this.state.text}</h3>
-                        <input type="text" onChange={this.change.bind(this)} />
-                    </div>
-            }
-        }
+    render() {
+        return <div>
+                <Hello name="cls" text="这是第一行的内容" />
+                <Hello2 text="这是第二行的内容" />
+                <Hello4 text={this.state.text}/>
+                <input type="text" onChange={this.change.bind(this)} />
+            </div>
+    }
+} 
+
+        
 
         const root = ReactDOM.createRoot(document.getElementById("root"))
         root.render(<Hello3 name="cls"/>)

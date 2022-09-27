@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>React</title>
+		<link rel="icon" href="https://reactjs.org/logo-180x180.png">
+		<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="text/babel">
+			// class Hello extends React.Component {
+			// 	constructor(props) {
+			// 		super(props);
+			// 		// this.cli = this.cli.bind(this,'构造绑定参数：参数列表')
+			// 	}
+			// 	cli(e) {
+			// 		console.log(this);
+			// 		console.log(e);
+			// 	}
+			// 	render() {
+			// 		return <h1 onClick={this.cli.bind(this, 'this.bind绑定参数：参数列表')}>hello world</h1>
+			// 		// return <h1 onClick={e => this.cli(e)}>hello world</h1>
+			// 		// return <h1 onClick={this.cli}>hello world</h1>
+			// 	}
+			// }
+			function World() {
+				return <h1 onClick={function(){test('函数式组件绑定参数')}}>hello world</h1>
+			}
+		function test(e) {
+			// console.log("点击了");
+			console.log(e);
+		}
+        const element = <h1 onClick={function(){test('123')}}>hello world</h1>
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(<World />)
+    </script>
+	</body>
+</html>

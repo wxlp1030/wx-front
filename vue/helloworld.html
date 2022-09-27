@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+	<link rel="icon" href="https://reactjs.org/logo-180x180.png">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+	<!-- onclick  on+事件名 = 函数（[参数列表]） -->
+	<button onclick="jsCli('js传参')">js点击</button>
+	<!-- dom 节点 .on+事件名=function(){事件对象} -->
+	<button id="btn">js点击</button>
+	
+	<!-- on+事件名 = 函数（[参数列表]） -->
+	<button onclick="jqCli()">jquey点击</button>
+	<!-- dom.on(事件类型types、[data(对象)]、函数{事件对象}) -->
+	<!-- dom.bind(事件类型、[data(任意)]、函数{事件对象}) -->
+	<!-- dom.事件名（[data(任意)],函数{事件对象}） -->
+	<button id="jqbtn">jquey点击</button>
+	
+    <div id="root">
+	</div>
+    <script type="text/babel">
+		// on+事件名（驼峰命名）=函数 {默认的事件对象} 函数不能写括号传递参数通过匿名函数的方法  function（）{函数名（参数列表）}
+		// 函数式组件、类组件也可以使用这种方式
+		// 绑定的函数在类里面  this.函数名.bind(this, [data])  箭头函数  e=> this.函数名（[data],e）构造器里面绑定  this.函数名 = this.函数名.bind(this,[data])
+        // const element = <h1 onClick={function() {jsCli('react 参数')}}>hello world</h1>
+        // const element = <h1 onClick={jsCli('react 参数')}>hello world</h1>
+		// function Hello() {
+		// 	return <h1 onClick={function() {jsCli('react 参数')}}>hello world</h1>
+		// }
+		class Hello extends React.Component {
+			constructor(props) {
+				super(props);
+				this.reCli = this.reCli.bind(this, '构造器参数')
+			}
+			reCli(e) {
+				console.log(e);
+			}
+			render() {
+				return <h1 onClick={this.reCli}>hello world</h1>
+			}
+		}
+		
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(<Hello />)
+		
+		function jsCli(e) {
+			console.log(arguments);
+			console.log(e);
+		}
+		
+		function jqCli() {
+			console.log(arguments);
+		}
+		
+		document.getElementById("btn").onclick = function() {
+			console.log(arguments);
+		}
+		
+		$('#jqbtn').on('click',123,  function(e) {
+			console.log(arguments);
+			console.log(e.data);
+		})
+		
+		// $('#jqbtn').bind('click', 123, function(e) {
+		// 	console.log(arguments);
+		// 	console.log(e.data);
+		// })
+		// $('#jqbtn').click('参数列表',function(e) {
+		// 	console.log(arguments);
+		// 	console.log(e.data);
+		// })
+		
+		
+		
+    </script>
+</body>
+</html>

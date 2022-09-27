@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue3</title>
+	<link rel="icon" href="https://cn.vuejs.org/logo.svg">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="view">
+		<!-- v-on:事件名=函数名([data]) 加括号没有默认的事件对象  不加括号有一个默认的事件对象 -->
+		<!-- @事件名=函数名 -->
+		<button @click="vueCli('vue 参数')">vue点击</button>
+	</div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    message : "hello world",
+                }
+            },
+            methods : {
+				vueCli(e) {
+					console.log(arguments);
+					console.log(e);
+				}
+			}
+        })
+        app.mount("#view")
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <style>
+        .cls {
+            color: red;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // 30分钟入门react
+        // jsx 元素 组件 属性 状态 事件 
+        // jsx: <h1>hello world</h1>  这个标签既不是字符串也不是 HTML，被称为 JSX，是一个 JavaScript 的语法扩展
+        // jsx可以更好的描述UI应该呈现出它应有交互的本质样式
+        // 元素: 元素是构成 React 应用的最小砖块。元素描述了你在屏幕上想看到的内容。
+        // ReactDOM 会负责更新 DOM 来与 React 元素保持一致。
+        // 组件: 允许将 页面 拆分为独立可复用的代码片段，并对每个片段进行独立构思。 -- 渲染机制 -- 拆分组件
+        // 定义组件最简单的方式就是编写 JavaScript 函数; 
+        // 同时还可以使用 ES6 的 class 来定义组件
+        // 渲染机制: React 调用组件，并将属性对象作为 props 传入。
+        // 属性: props 主要的区别在于 props 是不可变的，而 state 可以根据与用户交互来改变
+        // 作用：用于接收组件外部的数据
+        // 传递数据： 通过给组件标签添加属性
+        // 接收数据：函数组件通过参数props接收数据，类组件通过 this.props接收数据
+        // 所有 React 组件都必须像纯函数一样保护它们的 props 不被更改。
+        // 状态: React 通过与用户的交互，实现不同状态，然后渲染 UI，让用户界面和数据保持一致
+        // 只需更新组件的 state，然后根据新的 state 重新渲染用户界面（不要操作 DOM）。
+        // 无法直接修改，调用 setState() 方法修改值
+        // 事件: 事件处理和 DOM 元素类似。但是有一点语法上的不同:
+        // React 事件绑定属性的命名采用驼峰式写法，而不是小写。
+        // 如果采用 JSX 的语法你需要传入一个函数作为事件处理函数，而不是一个字符串
+        // JSX类的方法默认是不会绑定 this 的
+        function Test01(props) {
+            // props.text = "修改内容"
+            return <h2 className={props.name}>{props.text},{props.t}</h2>
+        }
+        function Comment(props) {
+            return (
+                <div className="box">
+                <div className="userInfo">
+                    <img className="userImg"
+                    src={props.author.avatarUrl}
+                    alt={props.author.name}
+                    />
+                    <div className="username">
+                        {props.author.name}
+                    </div>
+                </div>
+                <div className="text">
+                    {props.text}
+                </div>
+                <div className="date">
+                    {props.date}
+                </div>
+                </div>
+            );
+        }
+
+        class Hello3 extends React.Component {
+            constructor(props) {
+                super(props)
+                this.state = {text: ''}
+            }
+            change() {}
+            render() {
+                return <div>
+                        <h1 className="cls"> 第一行</h1>
+                        <p >第二行内容</p>
+                        <p>第三行{this.state.text}</p>
+                        <hr />
+                        <input type="text" onChange={this.change.bind(this)}/>
+                    </div>
+            }
+        }
+
+        const element = <h1>你好</h1>
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(<Hello3 />)
+    </script>
+</body>
+
+</html>

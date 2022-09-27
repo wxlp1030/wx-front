@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>React</title>
+		<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+		<style>
+			.test {
+				width: 100%;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="text/babel">
+			// // jsx 元素 组件 属性 状态 事件 
+        const element = (
+			<div>
+				<Name name="shenli"/>
+				<Name />
+				<Name />
+			</div>
+		)
+		
+		function Name(props) {
+			const style = {color: "skyblue",fontSize:"20px"}
+			// props.name = "1234";
+			// props.name = "1234";
+			return <h1 style={style} className="test">第一行{props.name}</h1>
+		}
+		
+		class Hello extends React.Component {
+			constructor() {
+				super()
+				this.state= {text: '初始化状态'}
+			}
+			change(e) {
+				this.setState({
+					text: e.target.value
+				})
+			}
+			
+			render() {
+				return (
+					<div>
+						<Name name="杨洋"/>
+						<Text text={this.state.text} />
+						<input type="text" onChange={this.change.bind(this)} />
+					</div>
+				)
+			}
+		}
+		
+		function Text(props) {
+			return <h2>这是一段h2文字{props.text}</h2>
+		}
+		
+		
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(<Hello name="hello"/>)
+    </script>
+	</body>
+</html>

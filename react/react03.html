@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+	<link rel="icon" href="https://reactjs.org/logo-180x180.png">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+	<style>
+		.cls {
+			color: #002fa7;
+			width: 100%;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+		// js 代码块中出现了html标签语言   jsx  script标签中声明 type="text/babel"
+		// 元素 是react应用的最小组成单位 描述了你想在页面上看到的内容
+		
+		// ReactDOM 渲染dom让页面与数据保持一致
+		// 组件: 可以将页面拆分成独立的可重复使用的片段  （函数组件和类组件）
+		// 渲染机制: React 调用组件，并将属性对象作为 props 传入
+		// 属性: 会把调用组件的时候，传入的属性放到 props里面
+		// state
+		
+		function Name(props) {
+			return <h1 className={props.cls}>姓名是{props.name}</h1>
+		}
+		
+		class Hello3 extends React.Component {
+		    constructor(props) {
+		        super(props)
+		        this.state = {text: ''}
+		    }
+			change(e) {
+				console.log(e);
+				this.setState({
+					text: e.target.value
+				})
+			}
+		    render() {
+		        return <div>
+		                <h1 className="cls"> 第一行</h1>
+		                <p >第二行内容</p>
+		                <p>第三行{this.state.text}</p>
+		                <hr />
+		                <input type="text" onChange={e => this.change(e)}/>
+		            </div>
+		    }
+		}
+		
+        const element = <h1>下午好，今天有点热</h1>
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(<Hello3 name="神里" cls="cls"/>)
+    </script>
+</body>
+</html>

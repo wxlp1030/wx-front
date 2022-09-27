@@ -1,0 +1,9 @@
+{
+  "app": {
+    "weixin": {
+      "appid": "填写你的开放平台APP的唯一标识appid，详见：https://pay.weixin.qq.com/wiki/doc/api/tools/mch_pay.php?chapter=4_3",
+      "mchid": "填写你的商户id",
+      "partnerKey": "填写你的安全密钥"
+    }
+  }
+}

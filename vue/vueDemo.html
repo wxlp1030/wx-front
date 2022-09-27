@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue3</title>
+	<link rel="icon" href="https://cn.vuejs.org/logo.svg">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+	<button onclick="cli3('js点击参数')">js点击</button>
+	<button id="btn">js点击</button>
+    <div id="view">
+		<button @click="cli()">vue点击</button>
+	</div>
+	<button onclick="cli2(this)">jquery点击</button>
+	<div id='btnbox' style="height: 80px;background-color: antiquewhite;"><button id="jqbtn">jquery点击</button></div>
+    <script>
+		// document.getElementById('btn').onclick = function(e) {
+		// 	console.log(arguments);
+		// }
+		
+		document.getElementById('btn').addEventListener('click', function() {
+			console.log(arguments);
+		})
+		
+		function cli3(e) {
+			console.log(arguments);
+			console.log(e);
+		}
+		
+		
+		// $('#jqbtn').on('click',{name: 'jquery的参数'}, function(e) {
+		// 	console.log(e.data);
+		// })
+		
+		$('#jqbtn').click({name: 'click参数'},function(e) {
+			console.log(e.data);
+		})
+		
+		// $('#jqbtn').delegate('#btnbox', 'click', function() {
+		// 	console.log("点击了div");
+		// })
+		
+		// $('#jqbtn').bind('click', 'jquery参数', function(e) {
+		// 	console.log(e.data);
+		// })
+		
+		function cli2(e) {
+			console.log(arguments);
+			console.log(e);
+		}
+		
+        const app = Vue.createApp({
+            data() {
+                return {
+                    message : "hello world",
+                }
+            },
+            methods : {
+				cli() {
+					console.log(arguments);
+				}
+			}
+        })
+        app.mount("#view")
+		
+		
+		
+    </script>
+</body>
+</html>

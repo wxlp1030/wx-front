@@ -1,0 +1,681 @@
+page {
+	background: radial-gradient(circle at 20px 20px, #AABEFA 5px, #B7C9FB 0);
+	background-size: 30px 30px;
+}
+
+.top {
+	width: 100%;
+	height: auto;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+}
+
+.toptitle {
+	width: 100%;
+	height: 100rpx;
+	/* #ifdef APP-PLUS */
+	padding: 20rpx 39rpx 0 35rpx;
+	/* #endif */
+	/* #ifdef MP*/
+	padding-left: 35rpx;
+	/* #endif */
+}
+
+.toptitle .iconview {
+	width: 196rpx;
+	height: 57rpx;
+	position: relative;
+	float: left;
+}
+
+.toptitle .iconview .box {
+	width: 192rpx;
+	height: 22px;
+	border: 2px solid #1f2b4d;
+	background-color: rgba(0, 23, 35, 0.2);
+	border-radius: 15rpx;
+	position: absolute;
+	left: 0rpx;
+	top: 0rpx;
+	color: #ffffff;
+	font-size: 30rpx;
+	text-align: right;
+	line-height: 22px;
+	/* #ifdef APP-PLUS */
+	padding: 0 10rpx 0 40rpx; 
+	line-height:18px;
+	/* #endif */
+	/* #ifdef MP */
+	padding: 0 10rpx 0 0;
+	/* #endif */
+	overflow: hidden;
+	word-break: break-all;
+	/* break-all(允许在单词内换行。) */
+	text-overflow: ellipsis;
+	/* 超出部分省略号 */
+	display: -webkit-box;
+	/** 对象作为伸缩盒子模型显示 **/
+	-webkit-box-orient: vertical;
+	/** 设置或检索伸缩盒对象的子元素的排列方式 **/
+	-webkit-line-clamp: 1;
+	/** 显示的行数 **/
+}
+
+.toptitle .iconview .jbimg {
+	width: 57rpx;
+	height: 57rpx;
+	position: absolute;
+	z-index: 9;
+	/* #ifdef MP */
+	left: -5px;
+	top: -1px;
+	/* #endif */
+	/* #ifdef APP-PLUS */
+	left: -2px;
+	top: -3px;
+	/* #endif */
+}
+
+.toptitle .iconviewhb {
+	margin-left: 35rpx;
+}
+
+.toptitle .iconviewhb .jbimg1 {
+	width: 44rpx;
+	height: 53rpx;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9;
+	/* #ifdef APP-PLUS */
+	top: -3px;
+	left: -1px;
+	/* #endif */
+}
+
+.top .tabbar {
+	width: 700rpx;
+	height: 102rpx;
+	margin: 20rpx auto;
+	position: relative;
+}
+
+.top .tabbar .tabimg {
+	position: absolute;
+	left: 0;
+	bottom: 2rpx;
+}
+
+.top .tabbar .tabbartop {
+	width: 100%;
+	height: 73rpx;
+	position: relative;
+}
+
+.tabbar-img {
+	width: 100%;
+	height: 100%;
+}
+
+.top .tabbar .tabbartop .meiri,
+.top .tabbar .tabbartop .caige1 {
+	width: 352rpx;
+	height: 73rpx;
+	position: absolute;
+	bottom: 0;
+}
+
+.top .tabbar .tabbartop .meiri {
+	right: 0;
+}
+
+.top .tabbar .tabbartop .caige1 {
+	left: 0;
+}
+
+.top .tabbar .tabbartop .caige {
+	width: 351rpx;
+	height: 71rpx;
+	position: absolute;
+	bottom: -5rpx;
+	left: 0;
+}
+
+.top .tabbar .tabbartop .meiri1 {
+	width: 351rpx;
+	height: 71rpx;
+	position: absolute;
+	bottom: -5rpx;
+	right: 0;
+}
+
+/* 占位 */
+.zhanwei{
+	background: radial-gradient(circle at 20px 20px, #AABEFA 5px, #B7C9FB 0);
+	background-size: 30px 30px;
+	width: 100%;
+	height: 255rpx;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 99;
+}
+
+/* 提现--抽奖 */
+.caige-box{
+	width:710rpx;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	margin-top: 20rpx;
+}
+.caige-img{
+	width:710rpx;
+	height: 188rpx;
+}
+.caige-content{
+	width:670rpx;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	z-index: 90;
+	margin: 0 20rpx;
+}
+.caige-title{
+	width:70%;
+	height: 70rpx;
+	line-height: 80rpx;
+	-webkit-text-stroke: 0.5px #4D69BF;
+	text-stroke: 0.5px #4D69BF;
+	color: #ffffff;
+	font-size: 30rpx;
+	font-weight: bold;
+}
+.caige-info{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	/* #ifdef APP-PLUS */
+	margin-top: -5px;
+	/* #endif */
+	margin-top: 20rpx;
+}
+.caige-process-box{
+	display: flex;
+	flex-direction:column;
+}
+.caige-process{
+	width: 390rpx;
+	height: 15rpx;
+	border-radius: 15rpx;
+	background-color: #4D69BF;
+}
+
+.process{
+	height: 15rpx;
+	border-radius: 15rpx;
+	background-color: #FF7A00;
+}
+
+.caige-tips{
+	color: #4D69BF;
+	font-size: 25rpx;
+	font-weight: bold;
+	line-height: 60rpx;
+}
+
+.caige-btn-img{
+	width: 174rpx;
+	height: 66rpx;
+}
+
+.caigebox1 {
+	/* #ifdef APP-PLUS */
+	width: 704rpx;
+	height: 201rpx;
+	/* #endif */
+	/* #ifdef MP */
+	width: 675rpx;
+	height: 203rpx;
+	/* #endif */
+	margin: 20rpx auto 0;
+	background-image: url(../../static/imags/renwu/fghfd.png);
+	background-size: cover;
+	padding: 0 20rpx;
+}
+
+.caigebox1 .topbox {
+	width: 100%;
+	height: 70rpx;
+}
+
+.caigebox1 .topbox .tixianjihui {
+	width: 105rpx;
+	height: 33rpx;
+	float: left;
+	margin-left: 10rpx;
+	margin-top: 23rpx;
+}
+
+.caigebox1 .topbox .tixianjihui .tixianjihui-img {
+	width: 105rpx;
+	height: 33rpx;
+}
+
+.caigebox1 .topbox .title {
+	width: auto;
+	height: 100%;
+	line-height: 80rpx;
+	font-size: 30rpx;
+	font-weight: bold;
+	color: #914E00;
+	float: left;
+}
+
+.caigebox1 .topbox .jindubarbox {
+	width: 125rpx;
+	height: 12rpx;
+	background: #AE7B3C;
+	border-radius: 12rpx;
+	float: right;
+	margin-top: 39rpx;
+}
+
+.caigebox1 .topbox .jindubarbox .jindubar {
+	height: 12rpx;
+	background: #FF7A00;
+	border-radius: 12rpx;
+}
+
+.caigebox1 .topbox .jindu {
+	float: right;
+	height: 100%;
+	line-height: 90rpx;
+	font-size: 26rpx;
+	font-weight: bold;
+	color: #FF7A00;
+	margin-left: 15rpx;
+	min-width: 80rpx;
+	text-align: right;
+}
+
+.caigebox1 .bottombox {
+	width: 100%;
+	height: 110rpx;
+}
+
+.caigebox1 .bottombox .buttom {
+	width: 174rpx;
+	height: 70rpx;
+	float: right;
+	margin-top: 32rpx;
+}
+
+.caigebox1 .bottombox .buttom .but-img {
+	width: 174rpx;
+	height: 70rpx;
+}
+
+.caigebox1 .bottombox .buttom .videobutton {
+	width: 174rpx;
+	height: 55rpx;
+	background-image: url(../../static/imags/index/anc.png);
+	background-size: 100% 100%;
+	text-align: center;
+	line-height: 46rpx;
+	color: #FFFFFF;
+	font-size: 28rpx;
+	font-weight: bold;
+}
+
+.caigebox1 .bottombox .hongbao {
+	float: left;
+}
+
+.caigebox1 .bottombox .hongbao .count {
+	width: auto;
+	font-size: 26rpx;
+	font-family: DFPYuanW5-GB;
+	font-weight: 400;
+	color: #C8791E;
+	margin-top: 14rpx;
+	overflow: hidden;
+	word-break: break-all;
+	/* break-all(允许在单词内换行。) */
+	text-overflow: ellipsis;
+	/* 超出部分省略号 */
+	display: -webkit-box;
+	/** 对象作为伸缩盒子模型显示 **/
+	-webkit-box-orient: vertical;
+	/** 设置或检索伸缩盒对象的子元素的排列方式 **/
+	-webkit-line-clamp: 1;
+	/** 显示的行数 **/
+	max-width: 450rpx;
+}
+
+.caigebox1 .bottombox .hongbao .image {
+	height: 47rpx;
+	line-height: 47rpx;
+	margin-top: 10rpx;
+}
+
+.caigebox1 .bottombox .hongbao .image1 {
+	margin-top: 35rpx;
+}
+
+.caigebox1 .bottombox .hongbao .image .img {
+	display: block;
+	float: left;
+}
+
+.caigebox1 .bottombox .hongbao .image .money {
+	float: left;
+	height: 47rpx;
+	line-height: 47rpx;
+	font-size: 30rpx;
+	font-family: DFPYuanW5-GB;
+	font-weight: bold;
+	color: #FF7A00;
+	margin-left: 10rpx;
+}
+
+.tishibox {
+	width: 700rpx;
+	height: 190rpx;
+	background-color: #FFAA33;
+	border: 2px solid #222F56;
+	border-radius: 20rpx;
+	margin: 20rpx auto;
+	text-align: center;
+	line-height: 1.5em;
+	padding-top: 45rpx;
+	color: #ffffff;
+	font-weight: 900;
+	font-size: 35rpx;
+}
+
+.mr {
+	border-right: #EEEEEE solid 1px;
+}
+
+.inviteBox {
+	width: 703rpx;
+	height: 298rpx;
+	background-image: url(../../static/imags/renwu/qdk.png);
+	background-size: cover;
+	margin: 0 auto;
+}
+
+.inviteTitleBox {
+	width: 100%;
+	height: 80rpx;
+	padding-top: 1rpx;
+	position: relative;
+}
+
+.inviteTitle {
+	color: #FFFFFF;
+	font-weight: 600;
+	position: absolute;
+	top: 10px;
+	left: 13px;
+}
+
+.inviteImg {
+	width: 174rpx;
+	height: 66rpx;
+	display: block;
+	float: right;
+	margin: 13rpx 24rpx 0 0;
+}
+
+.inviteCountBox {
+	width: 100%;
+	display: flex;
+	margin-top: 30rpx;
+	justify-content: space-around;
+	flex-direction: row;
+}
+
+.inviteCountItem {
+	display: flex;
+	width: 50%;
+	align-items: center;
+	flex-direction: column;
+}
+
+.inviteCount {
+	font-size: 60rpx;
+	font-weight: 800;
+	color: #4D69BF;
+}
+
+.inviteTip {
+	font-size: 25rpx;
+	color: #999;
+}
+
+
+/* 每日签到 */
+.qiandaobox {
+	width: 704rpx;
+	height: 298rpx;
+	background-image: url(../../static/imags/renwu/qdk.png);
+	background-size: cover;
+	margin: 0 auto;
+}
+
+.qiandaobox .jinriqiandao {
+	width: 100%;
+	height: 120rpx;
+	padding-top: 1rpx;
+}
+
+.qiandaobox .jinriqiandao .img1 {
+	width: 151rpx;
+	height: 57rpx;
+	margin: 10rpx 0 0 11rpx;
+	display: block;
+	float: left;
+}
+
+.qiandaobox .jinriqiandao .img2 {
+	width: 174rpx;
+	height: 66rpx;
+	display: block;
+	float: right;
+	margin: 13rpx 24rpx 0 0;
+}
+
+.qiandaobox .qiandaojindubox {
+	width: 100%;
+	height: 150rpx;
+	position: relative;
+}
+
+.qiandaobox .qiandaojindubox .qiandaojindubar {
+	width: 548rpx;
+	height: 13rpx;
+	border-radius: 13rpx;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.qiandaobox .qiandaojindubox .qiandaoitembox {
+	width: 100%;
+	height: 150rpx;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.qiandaobox .qiandaojindubox .qiandaoitembox .item {
+	width: 20%;
+	height: 100%;
+	float: left;
+	position: relative;
+}
+
+.qiandaobox .qiandaojindubox .qiandaoitembox .item .jinbi {
+	width: 49rpx;
+	height: 49rpx;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.qiandaobox .qiandaojindubox .qiandaoitembox .item .liwu {
+	width: 45rpx;
+	height: 47rpx;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.qiandaobox .qiandaojindubox .qiandaoitembox .item .coin {
+	width: 100%;
+	height: 50%;
+	text-align: center;
+	font-size: 26rpx;
+	color: #4D69BF;
+}
+
+.qiandaobox .qiandaojindubox .qiandaoitembox .item .status {
+	width: 100%;
+	height: auto;
+	text-align: center;
+	position: absolute;
+	bottom: 2px;
+	font-size: 26rpx;
+	color: #4D69BF;
+}
+
+.qiandaobox .qiandaojindubox .qiandaoitembox .item .coin1,
+.qiandaobox .qiandaojindubox .qiandaoitembox .item .status1 {
+	opacity: 0.72;
+}
+
+.coinred{
+	color:#F95300;
+}
+
+.qiandaobox .qiandaojindubox .qiandaoitembox .item .quanqin {
+	width: 103rpx;
+	height: 29rpx;
+	border-radius: 10rpx;
+	background-color: #BF3966;
+	text-align: center;
+	color: #FFFFFF;
+	line-height: 29rpx;
+	font-size: 23rpx;
+	margin: 0 auto;
+}
+
+/* 获得现金 */
+.huodemoney {
+	width: 598rpx;
+	height: 636rpx;
+	margin: auto;
+	position: relative;
+}
+
+.huodemoney-img {
+	width: 598rpx;
+	height: 530rpx;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.huodemoney-close {
+	width: 28rpx;
+	height: 29rpx;
+	position: absolute;
+	right: 20rpx;
+	top: 85rpx;
+}
+
+.huodemoney-content {
+	width: 598rpx;
+	position: absolute;
+	top: 100px;
+	left: 0px;
+}
+
+.huodemoney .huodemoney-content .title {
+	text-align: center;
+	width: 100%;
+	color: #24325A;
+	font-size: 35rpx;
+	font-weight: bold;
+}
+
+.huodemoney .huodemoney-content .title .text {
+	color: #F95300;
+}
+
+.huodemoney .title1 {
+	text-align: center;
+	width: 100%;
+	color: #24325A;
+	font-size: 26rpx;
+}
+
+.huodemoney-button {
+	width: 512rpx;
+	height: 110rpx;
+	margin: 0 auto;
+	position: relative;
+}
+
+.huodemoney-button-img {
+	width: 512rpx;
+	height: 110rpx;
+}
+
+.huodemoney-button-text {
+	text-align: center;
+	line-height: 106rpx;
+	color: #FFFFFF;
+	font-size: 35rpx;
+	font-weight: bold;
+	position: absolute;
+	top: -2px;
+	left: 45px;
+}
+
+
+.toast {
+	width: 500rpx;
+	height: 150rpx;
+	border: 2px solid #0F0D3C;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 20rpx;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	color: #FFE95A;
+	font-size: 40rpx;
+	font-weight: bold;
+	z-index: 9999999999;
+	text-align: center;
+	line-height: 150rpx;
+}
