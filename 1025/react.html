@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+	<link rel="icon" href="https://reactjs.org/logo-180x180.png">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+		class Hello extends React.Component {
+			constructor() {
+				super()
+				this.cli2.bind(this)
+			}
+			cli(a,e) {
+				console.log("dianji",a,  e);
+			}
+			cli1(e) {
+				console.log(e);
+			}
+			cli2(e) {
+				console.log(e);
+			}
+			
+			render() {
+				return <div>
+					<button onClick={this.cli1}>按钮一</button>
+					<button onClick={(e) => this.cli("123", e)}>按钮二</button>
+				</div>
+			}
+		}
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(<Hello />)
+    </script>
+</body>
+</html>

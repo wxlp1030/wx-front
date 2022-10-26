@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class Hello extends React.Component {
+            constructor() {
+                super()
+                this.state = {
+                    msg : 'hello react'
+                }
+            }
+            change = () => {
+                this.setState({
+                    msg: '这是第一节课'
+                })
+            }
+            render() {
+                return (
+                    <div>
+                        <h1>{this.state.msg}</h1>
+                        <World  msg="react is good"/>
+                        <button onClick={this.change}>按钮</button>
+                    </div>
+                )
+            }
+        }
+
+        function World (props) {
+            return <h1>{props.msg}</h1>
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(<Hello />)
+    </script>
+</body>
+</html>

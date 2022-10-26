@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>React</title>
+		<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+	</head>
+
+	<body>
+		<div id="root"></div>
+		<script type="text/babel">
+			class Hello extends React.Component {
+            constructor() {
+                super()
+                this.state = {
+                    list : ["one", "two", "three"],
+                    view : 'view'
+                }
+            }
+            choose () {
+                if (this.state.view == "view") {
+                    return <h1>hello react</h1>
+                } 
+                return <div>
+                    <button>hello button </button></div>
+            }
+            cli = () => {
+                this.setState({
+                    view: this.state.view == "view" ? 'button' : 'view'
+                })
+            }
+			// {this.state.view == "view" ? <h1>hello react</h1> : <div><button>hello button </button></div>}
+            render() {
+                return <div>
+                    <If condition={this.state.view == "view"} then={<h1>hello react</h1>} next={<div><button>hello button </button></div>}/>
+                    <button onClick={this.cli}>button </button>
+                    </div>
+            }
+        }
+		function If(props) {
+			const condition = props.condition
+			const then = props.then
+			const next = props.next
+			return condition ? then : next
+		}
+
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(<Hello />)
+    </script>
+	</body>
+
+</html>

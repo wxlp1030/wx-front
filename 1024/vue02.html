@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue3</title>
+	<link rel="icon" href="https://cn.vuejs.org/logo.svg">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="view">
+		<!-- v-if  v-else  v-if v-else-if v-else-if v-else -->
+		<!-- v-show -->
+		<!-- 条件为false  不会渲染 -->
+		<div v-if="num == 1">1</div>
+		<span v-else-if="num == 2">2</span>
+		<p v-else>其他</p>
+		<!-- 元素始终在dom里  修改了display属性 -->
+		<div v-show="flag">hello vue</div>
+	</div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    message : "hello world",
+					flag : false,
+					num : 2
+                }
+            },
+            methods : {}
+        })
+        app.mount("#view")
+    </script>
+</body>
+</html>

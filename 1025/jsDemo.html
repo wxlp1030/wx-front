@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>函数</title>
+	</head>
+	<body>
+		<script>
+			let aa = {
+				funA: function(a, b) {
+					console.log(this);
+					console.log(a, b);
+				}
+			}
+
+			let bb = {
+				funB: function(a, b) {
+					console.log(this);
+					console.log(a + b);
+				}
+			}
+			
+			aa.funA.call(bb, 11,22)
+			bb.funB.apply(aa, [11, 22]) 
+			
+			let cc = {
+				funC : aa.funA.bind(bb, 11, 22)
+			}
+			cc.funC()
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue3</title>
+	<link rel="icon" href="https://cn.vuejs.org/logo.svg">
+	<script src="js/vue.global.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+</head>
+<body>
+    <div id="view">
+		<button @click="say">{{message}}</button>
+	</div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    message : "hello world",
+                }
+            },
+            methods : {
+				// 自定义方法里面this指代当前vue实例对象
+				say() {
+					console.log(this);
+					console.log(this.$data.message);
+					this.message = "你好"
+					const _this = this
+					axios({
+						url: 'http://localhost:8888/index'
+					}).then(function () {
+						console.log(_this);
+					})
+				},
+				
+				// cry : () => {
+					
+				// }
+			},
+			mounted() {
+				console.log(this);
+			}
+        })
+        app.mount("#view")
+		// new Vue()
+		// class Student {
+		// 	constructor(name, age) {
+		// 		this.name = name;
+		// 		this.age = age
+		// 	}
+		// 	function say() {
+		// 		console.log("说话");
+		// 	}
+		// }
+		
+		// let stu = new Student("Bob", 11)
+		// console.log(stu.name);
+		// console.log(stu.age);
+		
+		
+    </script>
+</body>
+</html>

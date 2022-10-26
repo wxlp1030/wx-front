@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue3</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="view">
+        <div>{{list}}</div>
+        <div>{{obj}}</div>
+        <!-- v-for="item,index in/of array/number" -->
+        <div v-for="item,index of list">第{{index + 1}}个内容是：{{item}}</div>
+        <div v-for="item,index of 10">第{{index + 1}}个内容是：{{item}}</div>
+        <!-- v-for="value,key,index of/in object" -->
+        <div v-for="value,key,index of obj">第{{index+ 1}}个属性{{key}}是：{{value}}</div>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    message : "hello world",
+                    list: ["one", "two", "three"],
+                    obj: {
+                        name: 'bob',
+                        age: 11
+                    }
+                }
+            },
+            methods : {}
+        })
+        app.mount("#view")
+    </script>
+</body>
+</html>

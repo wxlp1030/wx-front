@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		.box {
+			width: 400px;
+			height: 500px;
+			border: 1px solid black;
+			position: relative;
+			perspective: 10000px;
+			transition: all 3s linear;
+
+
+		}
+
+		.first,
+		.second {
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			transform-style: preserve-3d;
+			animation: r 3s linear;
+		}
+
+		.first:hover {
+			cursor: pointer;
+		}
+
+		@keyframes r {
+			from {
+				transform: rotateY(0deg)
+			}
+
+			to {
+				transform: rotateY(180deg)
+			}
+		}
+
+
+		/* .box:hover .first{
+				transform:  rotateY(180deg);
+				transform-style: preserve-3d;
+			} */
+	</style>
+</head>
+
+<body>
+	<a href="">test</a>
+	<div class="box">
+		<div class="first" style="background-color: green;"></div>
+		<!-- <div class="second" style="background-color: blanchedalmond;"></div> -->
+	</div>
+</body>
+
+<script>
+	function hello() {
+		let total = 0;
+		let codes = [10, 10, 6];
+		// arr.forEach(a => codes.push(a.code))
+		for (let i = 0; i < codes.length; i++) {
+			let code = parseInt(codes[i])
+			if (code == 1 && total < 21) {
+				total += 11;
+				codes.splice(i, 1, 11);
+			} else {
+				total += code > 10 ? 10 : code
+			}
+		}
+		// console.log(codes.indexOf('11'));
+		while (total > 21 && codes.indexOf('11') > 0) {
+			total = total - 10
+			codes.splice(codes.indexOf('11'), 1, 1)
+		}
+		console.log("结束", total);
+	}
+	// hello();
+	console.log(Math.floor((2/6) * 100));
+
+	console.log(new Date("2022-09-10" + " 22:01"));
+</script>
+
+</html>

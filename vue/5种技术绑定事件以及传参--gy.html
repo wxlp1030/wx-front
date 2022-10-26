@@ -12,17 +12,25 @@
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 </head>
 <body>
-	<!-- onclick  on+事件名 = 函数（[参数列表]） -->
+	<!--js: onclick  on+事件名 = 函数（[参数列表]） -->
 	<button onclick="jsCli('js传参')">js点击</button>
 	<!-- dom 节点 .on+事件名=function(){事件对象} -->
 	<button id="btn">js点击</button>
 	
-	<!-- on+事件名 = 函数（[参数列表]） -->
+	<!--jquery: on+事件名 = 函数（[参数列表]） -->
 	<button onclick="jqCli()">jquey点击</button>
 	<!-- dom.on(事件类型types、[data(对象)]、函数{事件对象}) -->
 	<!-- dom.bind(事件类型、[data(任意)]、函数{事件对象}) -->
 	<!-- dom.事件名（[data(任意)],函数{事件对象}） -->
 	<button id="jqbtn">jquey点击</button>
+	
+	<!-- vue: v-on:事件名=函数名([data]) 加括号没有默认的事件对象  不加括号有一个默认的事件对象 -->
+	<!-- @事件名=函数名 -->
+	<!-- <button @click="vueCli('vue 参数')">vue点击</button> -->
+	
+	<!-- 小程序 bind 关键字 bindtap="函数名" 不可以直接传递参数，也不可以带括号； -->
+	 <!-- bind+事件=函数名  默认的事件对象 函数在Page 中进行定义、 通过data-属性="value" 传递参数  参数存储在  currentTarget.dataset里面-->
+	 <!-- <view bindtap="click" data-test="第一个参数" data-second="第二个参数">点击</view> -->
 	
     <div id="root">
 	</div>
