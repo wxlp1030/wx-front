@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>测试</title>
+		<style>
+			.banner {
+				display: flex;
+				width: 300px;
+				background-color: blanchedalmond;
+			}
+			
+			.title {
+				width: 100px;
+			}
+			@keyframes gd {
+				from {
+					transform: translateX(-10px);
+				}
+				to {
+					transform: translateX(-130px);
+				}
+			}
+			
+			.content {
+				margin-left: 10px;
+				animation: gd 3s linear 0s infinite;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="banner">
+			<div class="title">广告</div>
+			<div class="content">这是一条广告</div>
+		</div>
+	</body>
+</html>
